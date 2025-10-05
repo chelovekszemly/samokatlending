@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Работа в доставке — быстро, удобно, с перспективой!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 45px 25px;
+      background: linear-gradient(135deg, #f00078 0%, #ff5e9e 100%);
+      color: white;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 15px rgba(240, 0, 120, 0.25);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.6);
+      margin: 18px auto;
+      border-radius: 2px;
+    }
+
+    p.subtitle {
+      font-size: 1.25rem;
+      font-weight: 400;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.85rem;
+      color: #f00078;
+      margin: 30px 0 18px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.15rem;
+      margin: 12px 0;
+      color: #495057;
+    }
+
+    .benefits {
+      background-color: #fff;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      margin: 28px 0;
+    }
+
+    .benefits ul {
+      padding-left: 22px;
+      margin: 18px 0;
+    }
+
+    .benefits li {
+      margin: 16px 0;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: flex-start;
+      color: #495057;
+    }
+
+    .benefits li::before {
+      content: "✓";
+      color: #f00078;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 1.4rem;
+    }
+
+    form {
+      background: #fff;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      margin: 32px 0;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      color: #212529;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #f00078;
+      box-shadow: 0 0 0 3px rgba(240, 0, 120, 0.15);
+    }
+
+    button {
+      background-color: #f00078;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.25rem;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 600;
+      transition: background-color 0.3s;
+      letter-spacing: 0.3px;
+    }
+
+    button:hover {
+      background-color: #d6006a;
+    }
+
+    .contact {
+      text-align: center;
+      margin: 30px 0;
+      padding: 28px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    .contact h2 {
+      margin-bottom: 16px;
+      color: #212529;
+      font-weight: 600;
+    }
+
+    .contact p {
+      font-size: 1.15rem;
+      margin: 10px 0;
+    }
+
+    .contact strong {
+      color: #f00078;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 22px;
+    }
+
+    .social-icons a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-3px);
+    }
+
+    .social-icons svg {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+
+    .social-icons .telegram svg path {
+      fill: #0088cc;
+    }
+
+    .social-icons .whatsapp svg path {
+      fill: #25d366;
+    }
+
+    .social-icons .label {
+      font-size: 1.05rem;
+      color: #495057;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      form, .benefits, .contact {
+        padding: 22px;
+      }
+      .social-icons {
+        gap: 35px;
+      }
+      .social-icons svg {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Работа в доставке — быстро, удобно, с перспективой!</h1>
+      <p class="subtitle">Стань курьером доставки и получай доход до 180 450 ₽/мес!</p>
+    </header>
+
+    <section class="benefits">
+      <h2>🔥 Что ты получишь:</h2>
+      <ul>
+        <li>💰 Доход до 180 450 ₽/мес</li>
+        <li>💳 Еженедельные выплаты на карту</li>
+        <li>📅 Возможность работать когда хочешь</li>
+        <li>🚲 Велосипед и спецодежда бесплатно</li>
+        <li>💸 Полное отсутствие штрафов</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📝 Оставь свои данные — мы свяжемся с тобой!</h2>
+      <p>Заполни форму ниже, и наш HR-менеджер свяжется с тобой в ближайшее время!</p>
+
+      <form id="applicationForm">
+        <label for="fullname">ФИО:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович" required>
+
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+
+        <label for="city">Город:</label>
+        <input type="text" id="city" name="city" placeholder="Москва" required>
+
+        <button type="submit">Отправить заявку</button>
+      </form>
+    </section>
+
+    <div class="contact">
+      <h2>📞 Или сразу свяжитесь с нами</h2>
+      <p><strong>Телефон:</strong> +7 (902) 383-98-00</p>
+      <p>Работаем ежедневно с 9:00 до 21:00</p>
+
+      <div class="social-icons">
+        <a href="https://t.me/zaycevstaff" class="telegram" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M446.7 98.6c-3.8-13.5-20.9-16.6-32.3-7.5L292.9 186.9l-87.8-87.8c-16.2-16.2-42.6-16.2-58.8 0l-58.8 58.8c-16.2 16.2-16.2 42.6 0 58.8l87.8 87.8-100.5 100.5c-16.2 16.2-16.2 42.6 0 58.8l58.8 58.8c16.2 16.2 42.6 16.2 58.8 0l100.5-100.5 87.8 87.8c16.2 16.2 42.6 16.2 58.8 0l58.8-58.8c16.2-16.2 16.2-42.6 0-58.8l-155.4-155.4 100.5-100.5c16.2-16.2 16.2-42.6 0-58.8zM224 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z"/>
+          </svg>
+          <span class="label">Telegram</span>
+        </a>
+        <a href="https://wa.me/79023839800" class="whatsapp" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-79.7-13.4-104.6-29.3L117.8 402c2.9 3.6 6.1 6.9 9.5 9.9 3.3 2.9 6.8 5.5 10.3 7.9 3.6 2.4 7.3 4.5 11.1 6.3 3.8 1.8 7.7 3.3 11.6 4.5 3.9 1.2 7.8 2.1 11.8 2.6 4 .5 8 .8 12.1 .8 33.3 0 76.7-12.4 101.4-28.2 24.7-15.8 40.5-39.6 40.5-65.1 0-25.5-15.8-49.3-40.5-65.1-24.7-15.8-68.1-28.2-101.4-28.2zM224 292c-26.7 0-48-21.3-48-48s21.3-48 48-48 48 21.3 48 48-21.3 48-48 48z"/>
+          </svg>
+          <span class="label">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Все права защищены.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('applicationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const fullname = document.getElementById('fullname').value;
+      const phone = document.getElementById('phone').value;
+      const city = document.getElementById('city').value;
+
+      // Формируем сообщение
+      const message = `Новая заявка на работу!\n\nФИО: ${fullname}\nТелефон: ${phone}\nГород: ${city}`;
+
+      // Укажите токен вашего бота и ID чата
+      const botToken = '5323013951:AAH7Y1f4410X2ZQXy7Z123456789';  // ← ваш токен
+      const chatId = '7076832040';  // ← ваш ID чата
+
+      const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          alert(`Спасибо, ${fullname}! Данные успешно отправлены.`);
+        } else {
+          alert('Ошибка при отправке. Попробуйте позже.');
+        }
+      })
+      .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Ошибка сети. Попробуйте позже.');
+      });
+
+      this.reset();
+    });
+  </script>
+</body>
+</html>
